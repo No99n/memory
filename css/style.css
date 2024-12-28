@@ -1,0 +1,143 @@
+@import url('./confetti.css');
+*,
+::before
+::after {
+    padding: 0;
+    margin: 0;box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000;
+    margin: 0 auto;
+    max-width: 1230px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.game-content {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.header {
+    padding: 50px;
+}
+
+.header__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+.game-section {
+    padding: 25px;
+}
+
+.game-section__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-menu__title {
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #fff;
+}
+
+.game-menu__difficult-btn {
+    margin: 0;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    background: transparent;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.game-menu__difficult-btn:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.game-menu__difficult-btn,
+.restart-btn {
+    border-radius: 15px;
+    padding: 15px 20px;
+    background-color: #fffb00;
+}
+
+.game-menu__difficult-btn:hover {
+    background-color: #222;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.game-table {
+    display: inline-flex;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game-card {
+    max-width: 100px;
+    height: 100px;
+    flex: 0 0 23%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(209, 0, 0);
+    transition: all 0.2s linear;
+    border-radius: 5px;
+    transition: all 0.2s linear;
+    margin: 1%;
+}
+
+.game-card i {
+    font-size: 40px;
+    display: none;
+}
+
+.game-card i+i {
+    display: block;
+}
+
+.game-card.flip {
+    background: #ffffff !important;
+    transform: perspective(100px) rotateY(180deg);
+}
+
+.game-card.flip i {
+    display: block;
+}
+
+.game-card.flip i+i {
+    display: none;
+}
+
+.game-card.successfully {
+    background: #76db82 !important;
+}
+
+.game-card:hover {
+    background: #d1d1c0;
+}
